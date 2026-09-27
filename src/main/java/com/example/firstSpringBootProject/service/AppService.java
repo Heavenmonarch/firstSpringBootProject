@@ -1,4 +1,4 @@
-package com.example.firstSpringBootProject.service;
+ package com.example.firstSpringBootProject.service;
 
 import com.example.firstSpringBootProject.pojo.BaseResponse;
 import com.example.firstSpringBootProject.pojo.UserData;
@@ -12,9 +12,7 @@ public class AppService  {
     public static final Logger LOG = Logger.getLogger(AppService.class.getName());
 
     public BaseResponse createUser(UserData userData){
-        BaseResponse baseResponse = new BaseResponse();
-        baseResponse.setStatus(500);
-        baseResponse.setDescription("An error has occurred");
+        BaseResponse baseResponse = new BaseResponse(true);
         try{
 
             if (userData.getFirstName() != null){
